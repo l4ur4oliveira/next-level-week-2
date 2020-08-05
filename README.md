@@ -15,3 +15,15 @@ Projeto desenvolvido durante o [curso](https://nextlevelweek.com/) com as princi
 - Visula Studio Code
     - [Live Server Extension](https://github.com/ritwickdey/vscode-live-server)
 - Google Chrome
+
+## Project
+```
+/img
+/styles
+  main.css
+  ../partials
+    page-landing.css
+    page-study.css
+index.html
+study.html
+```
