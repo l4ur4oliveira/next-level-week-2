@@ -19,6 +19,8 @@ Projeto desenvolvido durante o [curso](https://nextlevelweek.com/) com as princi
 ## Project
 ```
 /img
+/scripts
+    addField.js
 /styles
     main.css
       ../partials
