@@ -20,10 +20,14 @@ Projeto desenvolvido durante o [curso](https://nextlevelweek.com/) com as princi
 ```
 /img
 /styles
-  main.css
-  ../partials
-    page-landing.css
-    page-study.css
+    main.css
+      ../partials
+          forms.css
+          header.css
+          page-landing.css
+          page-study.css
+          page-give-classes.css
 index.html
 study.html
+give-classes.html
 ```
