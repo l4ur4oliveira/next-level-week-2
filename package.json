@@ -1,0 +1,27 @@
+{
+  "name": "nlw",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido durante o curso com as principais noções de HTML, CSS e Javscript.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/l4ur4oliveira/next-level-week-2.git"
+  },
+  "keywords": [],
+  "author": "Laura de Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/l4ur4oliveira/next-level-week-2/issues"
+  },
+  "homepage": "https://github.com/l4ur4oliveira/next-level-week-2#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

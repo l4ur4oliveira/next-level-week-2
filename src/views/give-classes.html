@@ -19,9 +19,9 @@
         <header class="page-header">
             <div class="top-bar-container">
                 <a href="/">
-                    <img src="/img/icons/back.svg" alt="Voltar">
+                    <img src="/images/icons/back.svg" alt="Voltar">
                 </a>
-                <img src="/img/logo-proffy.svg" alt="Proffy">
+                <img src="/images/logo-proffy.svg" alt="Proffy">
             </div>
 
             <div class="header-content">
@@ -63,16 +63,9 @@
                         <label for="subject">Matéria</label>
                         <select name="subject" id="subject" required>
                             <option value="">Selecione uma opção</option>
-                            <option value="1">Artes</option>
-                            <option value="2">Biologia</option>
-                            <option value="3">Ciências</option>
-                            <option value="4">Educação física</option>
-                            <option value="5">Física</option>
-                            <option value="6">Geografia</option>
-                            <option value="7">História</option>
-                            <option value="8">Matemática</option>
-                            <option value="9">Português</option>
-                            <option value="10">Química</option>
+                            {%for subject in subjects%}
+                            <option value="{{loop.index}}">{{subject}}</option>
+                            {%endfor%}
                         </select>
                     </div>
 
@@ -91,14 +84,10 @@
                         <div class="select-block">
                             <label for="weekday">Dia da semana</label>
                             <select name="weekday" id="subject" required>
-                                <option value="" >Selecione uma opção</option>
-                                <option value="0">Domingo</option>
-                                <option value="1">Segunda-feira</option>
-                                <option value="2">Terça-feira</option>
-                                <option value="3">Quarta-feira</option>
-                                <option value="4">Quinta-feira</option>
-                                <option value="5">Sexta-feira</option>
-                                <option value="6">Sábado</option>
+                                <option value="">Selecione uma opção</option>
+                                {%for weekday in weekdays%}
+                                <option value="{{loop.index0}}">{{weekday}}</option>
+                                {%endfor%}
                             </select>
                         </div>
 
@@ -118,7 +107,7 @@
             
             <footer>
                 <p>
-                    <img src="/img/icons/warning.svg" alt="Aviso importante">
+                    <img src="/images/icons/warning.svg" alt="Aviso importante">
                     Importante!<br>
                     Preencha todos os dados
                 </p>

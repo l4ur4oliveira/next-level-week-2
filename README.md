@@ -2,7 +2,8 @@
 
 Projeto desenvolvido durante o [curso](https://nextlevelweek.com/) com as principais noções de HTML, CSS e Javscript.
 
-- [Roadmap do curso](https://www.notion.so/Front-end-ab15ef64dbe7459aba38364cf60af9d2)
+- [Roadmap Front-end](https://www.notion.so/Front-end-ab15ef64dbe7459aba38364cf60af9d2)
+- [Roadmap Back-end](https://www.notion.so/Back-end-4440c9aeda8c47d4856a8e4d4069e379)
 
 ## Layout
 
@@ -18,18 +19,20 @@ Projeto desenvolvido durante o [curso](https://nextlevelweek.com/) com as princi
 
 ## Project
 ```
-/img
-/scripts
-    addField.js
-/styles
-    main.css
-      ../partials
-          forms.css
-          header.css
-          page-landing.css
-          page-study.css
-          page-give-classes.css
-index.html
-study.html
-give-classes.html
+/public
+    /images
+    /scripts
+        addField.js
+    /styles
+        main.css
+        ../partials
+            forms.css
+            header.css
+            page-landing.css
+            page-study.css
+            page-give-classes.css
+/src
+    index.html
+    study.html
+    give-classes.html
 ```
