@@ -83,7 +83,7 @@
                     <div class="schedule-item">
                         <div class="select-block">
                             <label for="weekday">Dia da semana</label>
-                            <select name="weekday" id="subject" required>
+                            <select name="weekday[]" id="subject" required>
                                 <option value="">Selecione uma opção</option>
                                 {%for weekday in weekdays%}
                                 <option value="{{loop.index0}}">{{weekday}}</option>
