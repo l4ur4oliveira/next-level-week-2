@@ -13,33 +13,43 @@ function pageLanding(req, res) {
 
 async function pageStudy(req, res) {
     const filters = req.query;
+    let queryString = "";
 
     if (!filters.subject || !filters.weekday || !filters.time) {
-        return res.render("study.html", {subjects, weekdays, filters});
-    }
+        
+        // Retorna todos os proffys cadastrados
+        queryString = `
+            SELECT proffys.*, classes.*
+            FROM proffys
+            JOIN classes ON (classes.proffy_id = proffys.id);
+        `;
+        
+    } else {
+        
+        // Converte horas em minutos
+        const timeToMinutes = convertHoursToMinutes(filters.time);
 
-    // Converte horas em minutos
-    const timeToMinutes = convertHoursToMinutes(filters.time);
-
-    const query = `
-        SELECT proffys.*, classes.*
-        FROM proffys
-        JOIN classes ON (classes.proffy_id = proffys.id)
-        WHERE EXISTS(
-            SELECT class_schedule.*
-            FROM class_schedule
-            WHERE class_schedule.class_id = classes.id
-            AND class_schedule.weekday = ${filters.weekday}
-            AND class_schedule.time_from <= ${timeToMinutes}
-            AND class_schedule.time_to > ${timeToMinutes}
-        )
-        AND classes.subject = ${filters.subject};
-    `;
+        // Retorna os proffys que atendem ao filtro
+        queryString = `
+            SELECT proffys.*, classes.*
+            FROM proffys
+            JOIN classes ON (classes.proffy_id = proffys.id)
+            WHERE EXISTS(
+                SELECT class_schedule.*
+                FROM class_schedule
+                WHERE class_schedule.class_id = classes.id
+                AND class_schedule.weekday = ${filters.weekday}
+                AND class_schedule.time_from <= ${timeToMinutes}
+                AND class_schedule.time_to > ${timeToMinutes}
+            )
+            AND classes.subject = ${filters.subject};
+        `;
+    };
 
     // Caso haja erros na consulta do bd
     try {
         const db = await Database;
-        const proffys = await db.all(query);
+        const proffys = await db.all(queryString);
 
         proffys.map((proffy) => {
             proffy.subject = getSubject(proffy.subject);
