@@ -27,6 +27,28 @@ Se tudo estiver ok com a instalação, a aplicação poderá ser acessada em `lo
     - [SQLite Extension](https://github.com/AlexCovizzi/vscode-sqlite)
 - Google Chrome
 
+## Dados
+
+Com o arquivo `inserts.js` é possível inserir dados iniciais ao banco com a finalidade de agilizar o teste dos filtros.
+
+```
+node run src/databese/inserts.js
+```
+
+#### Guia de filtros
+
+Utilize a tabela abaixo como guia para as consultas na página **Estudar**.
+
+|  Matéria/Dias  |  Artes  |  Biologia  |  Ciências  |  História  |
+|:--------------:|:-------:|:----------:|:----------:|:----------:|
+|     Domingo    |         |   09h-10h  |            |            |
+|     Segunda    | 10h-13h |            |            |            |
+|     Terça      | 15h-17h |            |            |   08h-10h  |
+|     Quarta     | 17h-19h |            |            |            |
+|     Quinta     |         |            |            |   12h-14h  |
+|     Sexta      | 13h-15h |            |   16h-19h  |            |
+|     Sábado     |         |   08h-13h  |            |   11h-13h  |
+
 ## Project files structure
 
 ```
@@ -34,24 +56,28 @@ Se tudo estiver ok com a instalação, a aplicação poderá ser acessada em `lo
    /images
    /scripts
       ..addField.js
+      ..removeField.js
    /styles
      ..main.css
      /partials
         ..forms.css
         ..header.css
+        ..page-give-classes.css
         ..page-landing.css
         ..page-study.css
-        ..page-give-classes.css
+        ..page-success.css
 /src
    ..pages.js
    ..server.js
-   /db
+   /database
       ..createProffy.js
       ..db.js
+      ..inserts.js
    /utils
       ..format.js
    /views
+      ..give-classes.html
       ..index.html
       ..study.html
-      ..give-classes.html
+      ..success.html
 ```
