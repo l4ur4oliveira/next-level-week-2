@@ -5,7 +5,8 @@ const {
     pageLanding,
     pageStudy,
     pageGiveClasses,
-    saveClasses
+    saveClasses,
+    pageSuccess
 } = require('./pages');
 
 const nunjucks = require('nunjucks');   // Config nunjucks
@@ -21,5 +22,6 @@ server
 .get("/study", pageStudy)
 .get("/give-classes", pageGiveClasses)
 .post("/save-class", saveClasses)
+.get("/success", pageSuccess)
 
 .listen(5500);

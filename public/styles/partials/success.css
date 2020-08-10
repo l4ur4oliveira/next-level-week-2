@@ -1,0 +1,72 @@
+#success {
+    background: var(--color-primary) url('../../images/success-bg.svg') center no-repeat;
+    background-size: 84rem;
+}
+
+#success #container {
+    color: var(--color-text-in-primary);
+}
+
+.text-container {
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+.text-container img {
+    height: 12rem;
+}
+
+.text-container h2 {
+    font: 700 4.2rem Archivo;
+    color: var(--color-box-base);
+    line-height: 6rem;
+    margin-top: 4rem;
+}
+
+.text-container p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    margin-top: 2rem;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-container a {
+    width: 20rem;
+    height: 6rem;
+    border-radius: .8rem;
+    margin-right: 1.6rem;
+    font: 400 2rem Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.2s;
+    color: var(--color-button-text);
+}
+
+.buttons-container a.study {
+    background: var(--color-secondary);
+    margin-right: 0;
+}
+    .buttons-container a.study:hover {
+        background: var(--color-secondary-dark);
+    }
+
+@media (min-width: 700px) {
+
+    #success {
+        background-size: initial;
+    }
+
+    .text-container h2 {
+        font-size: 5rem;
+    }
+
+    .text-container img {
+        height: 120px;
+    }
+}
